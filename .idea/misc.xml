@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
         <entry key="..\:/Users/johnn/Documents/GitHub/PDM_2021_III_P2_PROYECTO2/app/src/main/res/layout/activity_clientes.xml" value="0.25" />
         <entry key="..\:/Users/johnn/Documents/GitHub/PDM_2021_III_P2_PROYECTO2/app/src/main/res/layout/activity_empleados.xml" value="0.25" />
         <entry key="..\:/Users/johnn/Documents/GitHub/PDM_2021_III_P2_PROYECTO2/app/src/main/res/layout/activity_listar_clientes.xml" value="0.25" />
@@ -14,6 +15,9 @@
         <entry key="..\:/Users/johnn/Documents/GitHub/PDM_2021_III_P2_PROYECTO2/app/src/main/res/layout/activity_menus.xml" value="0.25" />
         <entry key="..\:/Users/johnn/Documents/GitHub/PDM_2021_III_P2_PROYECTO2/app/src/main/res/layout/activity_pedidos.xml" value="0.25" />
         <entry key="..\:/Users/johnn/Documents/GitHub/PDM_2021_III_P2_PROYECTO2/app/src/main/res/layout/activity_realizar_facturas.xml" value="0.25" />
+=======
+        <entry key="..\:/Users/axelp/AndroidStudioProjects/PDM_2021_III_P2_PROYECTO2/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
+>>>>>>> bce5bfa15b2080dcf1e5e9102894f1b3639fa856
       </map>
     </option>
   </component>
