@@ -10,6 +10,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PDM_2021_III_P2_PROYECTO2">
         <activity
+            android:name=".activityMenu"
+            android:exported="false" />
+        <activity
+            android:name=".activityListarPedidos"
+            android:exported="false" />
+        <activity
+            android:name=".activityListarMenus"
+            android:exported="false" />
+        <activity
+            android:name=".activityListarFacturas"
+            android:exported="false" />
+        <activity
+            android:name=".activityCliente"
+            android:exported="false" />
+        <activity
+            android:name=".activityListarEmpleados"
+            android:exported="false" />
+        <activity
+            android:name=".activityListarClientes"
+            android:exported="false" />
+        <activity
             android:name=".ClientesActivity"
             android:exported="false" />
         <activity

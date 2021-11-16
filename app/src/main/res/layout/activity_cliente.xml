@@ -9,85 +9,110 @@
         android:id="@+id/txvRegistrarCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="74dp"
+        android:layout_marginEnd="118dp"
         android:text="Registrar Cliente"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="118dp"
-        tools:layout_editor_absoluteY="74dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/txtCorreoCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="40dp"
         android:ems="10"
         android:hint="Ingrese el Correo"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="343dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreCliente" />
 
     <EditText
         android:id="@+id/txtNombreCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="40dp"
         android:ems="10"
         android:hint="Ingrese el Nombre"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="250dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCodigoCliente" />
 
     <TextView
         android:id="@+id/txvCodigoCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="167dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="167dp"
         android:text="Codigo"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="183dp" />
+        app:layout_constraintBottom_toTopOf="@+id/txvCorreoCliente"
+        app:layout_constraintEnd_toStartOf="@+id/txvRegistrarCliente"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toTopOf="@+id/button" />
 
     <EditText
         android:id="@+id/txtCodigoCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="40dp"
         android:ems="10"
         android:hint="Ingrese el Codigo"
         android:inputType="number"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="157dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvRegistrarCliente" />
 
     <TextView
         android:id="@+id/txvNombreCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
         android:text="Nombre"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="276dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/txtNombreCliente"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/txvCorreoCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
         android:text="Correo"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="369dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/txtCorreoCliente"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabRegistrarCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:clickable="true"
-        app:srcCompat="@android:drawable/ic_menu_save"
-        tools:layout_editor_absoluteX="339dp"
-        tools:layout_editor_absoluteY="659dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_save" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="65dp"
-        android:layout_height="69dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="21dp"
         android:background="#00EF5350"
         android:backgroundTint="#00FFFFFF"
         android:textColor="#000000"
         android:textSize="48sp"
         app:icon="?attr/actionModeCloseDrawable"
         app:iconTint="#000000"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/txvRegistrarCliente"
+        app:layout_constraintEnd_toStartOf="@+id/txvRegistrarCliente"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

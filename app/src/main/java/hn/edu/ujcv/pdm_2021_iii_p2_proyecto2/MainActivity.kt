@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun clientes(){
-        val intent = Intent(this, ClientesActivity::class.java)
+        val intent = Intent(this, activityCliente::class.java)
         startActivity(intent)
 
     }
