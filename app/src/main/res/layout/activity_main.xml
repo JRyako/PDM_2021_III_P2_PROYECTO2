@@ -4,78 +4,103 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo2pr2"
+    android:background="@drawable/Fondo3"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/btn_empleados"
-        android:layout_width="154dp"
-        android:layout_height="56dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="37dp"
         android:backgroundTint="#474646"
         android:backgroundTintMode="add"
         android:text="Empleados"
-        tools:layout_editor_absoluteX="223dp"
-        tools:layout_editor_absoluteY="165dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btn_Clientes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_menus"
+        app:layout_constraintTop_toBottomOf="@+id/Grupo1" />
 
     <Button
         android:id="@+id/btn_Clientes"
-        android:layout_width="153dp"
-        android:layout_height="54dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="39dp"
         android:backgroundTint="#474646"
         android:text="Clientes"
         app:icon="@android:drawable/ic_menu_myplaces"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="258dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btn_facturas"
+        app:layout_constraintEnd_toStartOf="@+id/btn_pedidos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_empleados" />
 
     <Button
         android:id="@+id/btn_menus"
-        android:layout_width="154dp"
-        android:layout_height="53dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="35dp"
         android:backgroundTint="#474646"
         android:text="Menus"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="168dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/btn_empleados"
+        app:layout_constraintEnd_toStartOf="@+id/btn_empleados"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_empleados" />
 
     <Button
         android:id="@+id/btn_pedidos"
-        android:layout_width="152dp"
+        android:layout_width="0dp"
         android:layout_height="56dp"
+        android:layout_marginEnd="36dp"
         android:backgroundTint="#474646"
         android:backgroundTintMode="add"
         android:text="Pedidos"
         app:icon="?attr/actionModePasteDrawable"
-        tools:layout_editor_absoluteX="223dp"
-        tools:layout_editor_absoluteY="256dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_Clientes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_Clientes" />
 
     <Button
         android:id="@+id/btn_facturas"
         android:layout_width="164dp"
-        android:layout_height="48dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="108dp"
         android:backgroundTint="#474646"
         android:backgroundTintMode="add"
         android:text="Facturas"
         app:icon="?android:attr/actionModeFindDrawable"
-        tools:layout_editor_absoluteX="123dp"
-        tools:layout_editor_absoluteY="351dp" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="223dp"
-        android:layout_height="214dp"
-        app:srcCompat="@drawable/ujcv"
-        tools:layout_editor_absoluteX="94dp"
-        tools:layout_editor_absoluteY="441dp" />
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Clientes" />
 
     <TextView
         android:id="@+id/Grupo1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="93dp"
         android:fontFamily="monospace"
         android:text="Proyecto Grupo 1"
         android:textColor="#FFFFFF"
         android:textSize="42sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btn_empleados"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="205dp"
+        android:layout_height="196dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_facturas"
+        app:srcCompat="@drawable/logoUJCV" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
