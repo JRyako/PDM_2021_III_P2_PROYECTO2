@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PDM_2021_III_P2_PROYECTO2">
         <activity
+            android:name=".activityEmpleado"
+            android:exported="false" />
+        <activity
             android:name=".activityMenu"
             android:exported="false" />
         <activity
