@@ -102,6 +102,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_facturas"
-        app:srcCompat="@drawable/logoUJCV" />
+        app:srcCompat="@drawable/logoujcv" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
