@@ -28,7 +28,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun empleados(){
-
+        val intent = Intent(this, activityListarEmpleados::class.java)
+        startActivity(intent)
 
     }
     private fun facturas(){

@@ -15,7 +15,7 @@ class activityCliente : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cliente)
         btn_RegresarClientes.setOnClickListener { regresar() }
-        fabRegistrarCliente.setOnClickListener {guardar()}
+        fabRegistrarCliente.setOnClickListener { guardar() }
 
     }
     private fun regresar(){
@@ -24,23 +24,23 @@ class activityCliente : AppCompatActivity() {
     }
     private fun guardar(){
         if(txtCodigoCliente.text.isEmpty()){
-            Toast.makeText(applicationContext, "El numero de cuenta no puede estar vacio", Toast.LENGTH_LONG).show()
-        }else if(txtCorreoCliente.text.isEmpty()) {
-            Toast.makeText(applicationContext, "El nombre del alumno no puede estar vacio", Toast.LENGTH_LONG).show()
-        }else if(txtNombreCliente.text.isEmpty()){
-            Toast.makeText(applicationContext, "El correo no puede estar vacio", Toast.LENGTH_LONG).show()
+            Toast.makeText(applicationContext, "El Codigo del Cliente no puede estar vacio", Toast.LENGTH_LONG).show()
+        }else if(txtNombreCliente.text.isEmpty()) {
+            Toast.makeText(applicationContext, "El Correo del Cliente no puede estar vacio", Toast.LENGTH_LONG).show()
+        }else if(txeCorreoCliente.text.isEmpty()){
+            Toast.makeText(applicationContext, "El Nombre del Cliente no puede estar vacio", Toast.LENGTH_LONG).show()
         }else{
             val dato : Clientes = Clientes()
-            dato.Codigo  = txtCodigoCliente.text.toString().toInt()
+            dato.Codigo        = txtCodigoCliente.text.toString().toInt()
             dato.Nombre        = txtNombreCliente.text.toString()
-            dato.Correo        = txtCorreoCliente.text.toString()
+            dato.Correo        = txeCorreoCliente.text.toString()
 
             Clientes.Clientes.put(dato.Codigo, dato)
-            Toast.makeText(applicationContext, "Alumno Registrado", Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext, "Cliente Registrado", Toast.LENGTH_SHORT).show()
 
             txtCodigoCliente.text = null
-            txtCorreoCliente.text = null
             txtNombreCliente.text = null
+            txeCorreoCliente.text = null
         }
     }
 

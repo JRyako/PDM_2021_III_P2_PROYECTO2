@@ -37,7 +37,7 @@ class Clientes() : Parcelable {
     }
 
     override fun toString(): String {
-        return "Nombre del Cliente: $Nombre\nId: $Codigo\ncorreo: $Correo"
+        return "Nombre del Cliente: $Nombre\nId: $Codigo\nCorreo del Cliente: $Correo"
     }
 
 }

@@ -6,18 +6,18 @@ import android.os.Parcelable
 class Empleados() : Parcelable {
     var Codigo       :Int = 0
     var Nombre       :String = ""
-    var Correo       :String = ""
+    var Puesto       :String = ""
 
     constructor(parcel: Parcel) : this() {
         Codigo = parcel.readInt()
         Nombre = parcel.readString().toString()
-        Correo = parcel.readString().toString()
+        Puesto = parcel.readString().toString()
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeInt(Codigo)
         parcel.writeString(Nombre)
-        parcel.writeString(Correo)
+        parcel.writeString(Puesto)
     }
 
     override fun describeContents(): Int {
@@ -44,6 +44,6 @@ class Empleados() : Parcelable {
     // este era el imprimir notas del laboratorio 2 no se como implimentarlo en este proyecto
 
     override fun toString(): String {
-        return "Nombre del Empleado: $Nombre\nCodigo del Empleado: $Codigo"
+        return "Nombre del Empleado: $Nombre\nId: $Codigo\nPuesto del Empleado: $Puesto"
     }
 }

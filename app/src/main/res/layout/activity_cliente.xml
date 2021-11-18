@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/txvRegistrarCliente"
+        android:id="@+id/txvRegistrarEmpleado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="74dp"
@@ -18,23 +18,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/txtCorreoCliente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="40dp"
-        android:ems="10"
-        android:hint="Ingrese el Correo"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombreCliente" />
-
-    <EditText
         android:id="@+id/txtNombreCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginEnd="39dp"
         android:ems="10"
         android:hint="Ingrese el Nombre"
         android:inputType="textPersonName"
@@ -45,13 +33,13 @@
         android:id="@+id/txvCodigoCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="29dp"
         android:layout_marginTop="167dp"
-        android:layout_marginEnd="29dp"
+        android:layout_marginEnd="28dp"
         android:layout_marginBottom="167dp"
         android:text="Codigo"
-        app:layout_constraintBottom_toTopOf="@+id/txvCorreoCliente"
-        app:layout_constraintEnd_toStartOf="@+id/txvRegistrarCliente"
+        app:layout_constraintBottom_toTopOf="@+id/txvPuesto"
+        app:layout_constraintEnd_toStartOf="@+id/txvRegistrarEmpleado"
         app:layout_constraintStart_toStartOf="@+id/btn_RegresarClientes"
         app:layout_constraintTop_toTopOf="@+id/btn_RegresarClientes" />
 
@@ -60,12 +48,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="51dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginEnd="39dp"
         android:ems="10"
         android:hint="Ingrese el Codigo"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txvRegistrarCliente" />
+        app:layout_constraintTop_toBottomOf="@+id/txvRegistrarEmpleado" />
 
     <TextView
         android:id="@+id/txvNombreCliente"
@@ -77,12 +65,12 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/txvCorreoCliente"
+        android:id="@+id/txvPuesto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
         android:text="Correo"
-        app:layout_constraintBottom_toBottomOf="@+id/txtCorreoCliente"
+        app:layout_constraintBottom_toBottomOf="@+id/txeCorreoCliente"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -110,9 +98,21 @@
         android:textSize="48sp"
         app:icon="?attr/actionModeCloseDrawable"
         app:iconTint="#000000"
-        app:layout_constraintBottom_toBottomOf="@+id/txvRegistrarCliente"
-        app:layout_constraintEnd_toStartOf="@+id/txvRegistrarCliente"
+        app:layout_constraintBottom_toBottomOf="@+id/txvRegistrarEmpleado"
+        app:layout_constraintEnd_toStartOf="@+id/txvRegistrarEmpleado"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txeCorreoCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="39dp"
+        android:ems="10"
+        android:hint="Ingrese el Correo"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreCliente" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
