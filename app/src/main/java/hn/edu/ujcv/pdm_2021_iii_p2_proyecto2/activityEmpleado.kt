@@ -28,7 +28,7 @@ class activityEmpleado : AppCompatActivity() {
         }else if(txtNombreEmpleado.text.isEmpty()) {
             Toast.makeText(applicationContext, "El Nombre del Empleado no puede estar vacio", Toast.LENGTH_LONG).show()
         }else if(txtPuestoEmpleado.text.isEmpty()){
-            Toast.makeText(applicationContext, "El correo no puede estar vacio", Toast.LENGTH_LONG).show()
+            Toast.makeText(applicationContext, "El Puesto del Empleado no puede estar vacio", Toast.LENGTH_LONG).show()
         }else{
             val dato : Empleados = Empleados()
             dato.Codigo        = txtCodigoEmpleado.text.toString().toInt()

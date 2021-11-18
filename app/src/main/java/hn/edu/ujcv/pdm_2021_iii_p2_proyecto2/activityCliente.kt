@@ -26,9 +26,9 @@ class activityCliente : AppCompatActivity() {
         if(txtCodigoCliente.text.isEmpty()){
             Toast.makeText(applicationContext, "El Codigo del Cliente no puede estar vacio", Toast.LENGTH_LONG).show()
         }else if(txtNombreCliente.text.isEmpty()) {
-            Toast.makeText(applicationContext, "El Correo del Cliente no puede estar vacio", Toast.LENGTH_LONG).show()
-        }else if(txeCorreoCliente.text.isEmpty()){
             Toast.makeText(applicationContext, "El Nombre del Cliente no puede estar vacio", Toast.LENGTH_LONG).show()
+        }else if(txeCorreoCliente.text.isEmpty()){
+            Toast.makeText(applicationContext, "El Correo del Cliente no puede estar vacio", Toast.LENGTH_LONG).show()
         }else{
             val dato : Clientes = Clientes()
             dato.Codigo        = txtCodigoCliente.text.toString().toInt()

@@ -29,7 +29,7 @@ class Clientes() : Parcelable {
             return Clientes(parcel)
         }
         var Clientes: HashMap<Int, Clientes> = hashMapOf()
-        var pedidos: HashMap<Clientes,ArrayList<Empleados>> = hashMapOf()
+        //var pedidos: HashMap<Clientes,ArrayList<Empleados>> = hashMapOf()
 
         override fun newArray(size: Int): Array<Clientes?> {
             return arrayOfNulls(size)

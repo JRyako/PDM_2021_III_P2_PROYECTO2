@@ -7,7 +7,7 @@
     tools:context=".activityEmpleado">
 
     <TextView
-        android:id="@+id/txvRegistrarEmpleado"
+        android:id="@+id/txvRegistrarClientes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
@@ -39,7 +39,7 @@
         android:text="Codigo"
         app:layout_constraintBottom_toTopOf="@+id/txvNombreEmpleado"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txvRegistrarEmpleado" />
+        app:layout_constraintTop_toBottomOf="@+id/txvRegistrarClientes" />
 
     <EditText
         android:id="@+id/txtCodigoEmpleado"
@@ -51,7 +51,7 @@
         android:hint="Ingrese el Codigo"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txvRegistrarEmpleado" />
+        app:layout_constraintTop_toBottomOf="@+id/txvRegistrarClientes" />
 
     <TextView
         android:id="@+id/txvNombreEmpleado"
@@ -63,7 +63,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/txvPuesto"
+        android:id="@+id/txvCorreoCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="1dp"
@@ -97,7 +97,7 @@
         android:textSize="48sp"
         app:icon="?attr/actionModeCloseDrawable"
         app:iconTint="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/txvRegistrarEmpleado"
+        app:layout_constraintBottom_toTopOf="@+id/txvRegistrarClientes"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

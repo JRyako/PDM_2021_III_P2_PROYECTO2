@@ -7,7 +7,6 @@ import hn.edu.ujcv.pdm_2021_iii_p2_proyecto2.Clases.Clientes
 import kotlinx.android.synthetic.main.activity_listar_clientes.*
 
 class activityListarClientes : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_listar_clientes)

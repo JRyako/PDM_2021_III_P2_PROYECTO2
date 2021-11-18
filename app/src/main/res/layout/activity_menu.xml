@@ -6,4 +6,150 @@
     android:layout_height="match_parent"
     tools:context=".activityMenu">
 
+    <TextView
+        android:id="@+id/txvDescripcionMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="246dp"
+        android:text="Descripcion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mtxtDescripcionMenu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvPrecioMenu" />
+
+    <TextView
+        android:id="@+id/txvRegistrarMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="74dp"
+        android:layout_marginEnd="118dp"
+        android:text="Registrar Menu"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_RegresarMenus"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtNombreMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="39dp"
+        android:ems="10"
+        android:hint="Ingrese el Nombre"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCodigoMenu" />
+
+    <TextView
+        android:id="@+id/txvCodigoMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="167dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="167dp"
+        android:text="Codigo"
+        app:layout_constraintBottom_toTopOf="@+id/txvPrecioMenu"
+        app:layout_constraintEnd_toStartOf="@+id/txvRegistrarMenu"
+        app:layout_constraintStart_toStartOf="@+id/btn_RegresarMenus"
+        app:layout_constraintTop_toTopOf="@+id/btn_RegresarMenus" />
+
+    <EditText
+        android:id="@+id/txtCodigoMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="39dp"
+        android:ems="10"
+        android:hint="Ingrese el Codigo"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvRegistrarMenu" />
+
+    <TextView
+        android:id="@+id/txvNombreMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:text="Nombre"
+        app:layout_constraintBottom_toBottomOf="@+id/txtNombreMenu"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txvPrecioMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="79dp"
+        android:layout_marginBottom="78dp"
+        android:text="Precio"
+        app:layout_constraintBottom_toTopOf="@+id/txvDescripcionMenu"
+        app:layout_constraintEnd_toStartOf="@+id/txtPrecioMenu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_RegresarMenus" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabRegistrarMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mtxtDescripcionMenu"
+        app:srcCompat="@android:drawable/ic_menu_save" />
+
+    <Button
+        android:id="@+id/btn_RegresarMenus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="284dp"
+        android:background="#00EF5350"
+        android:backgroundTint="#00FFFFFF"
+        android:textColor="#000000"
+        android:textSize="48sp"
+        app:icon="?attr/actionModeCloseDrawable"
+        app:iconTint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/txvPrecioMenu"
+        app:layout_constraintEnd_toStartOf="@+id/txvRegistrarMenu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtPrecioMenu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="343dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="41dp"
+        android:ems="10"
+        android:hint="Ingrese el Precio"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/mtxtDescripcionMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvPrecioMenu"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/mtxtDescripcionMenu"
+        android:layout_width="206dp"
+        android:layout_height="216dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Ingrese la Descripcion del Menu"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/fabRegistrarMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvDescripcionMenu"
+        app:layout_constraintTop_toBottomOf="@+id/txtPrecioMenu" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

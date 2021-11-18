@@ -41,7 +41,8 @@ class MainActivity : AppCompatActivity() {
 
     }
     private fun menus(){
-
+        val intent = Intent(this, activityListarMenus::class.java)
+        startActivity(intent)
 
     }
 
