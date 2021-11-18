@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/fondogris">
 
     <TextView
         android:id="@+id/txvRegistrarClientes"
@@ -12,6 +13,7 @@
         android:layout_marginTop="74dp"
         android:layout_marginEnd="118dp"
         android:text="Registrar Cliente"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_RegresarClientes"
@@ -23,9 +25,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="39dp"
+        android:backgroundTint="#FFFFFF"
         android:ems="10"
         android:hint="Ingrese el Nombre"
         android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCodigoCliente" />
 
@@ -38,6 +43,7 @@
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="167dp"
         android:text="Codigo"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/txvCorreoCliente"
         app:layout_constraintEnd_toStartOf="@+id/txvRegistrarClientes"
         app:layout_constraintStart_toStartOf="@+id/btn_RegresarClientes"
@@ -51,6 +57,9 @@
         android:layout_marginEnd="39dp"
         android:ems="10"
         android:hint="Ingrese el Codigo"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txvRegistrarClientes" />
@@ -61,6 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
         android:text="Nombre"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/txtNombreCliente"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -70,6 +80,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
         android:text="Correo"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/txeCorreoCliente"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -79,9 +90,11 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
+        android:backgroundTint="#FFFFFF"
         android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="#000000"
         app:srcCompat="@android:drawable/ic_menu_save" />
 
     <Button
@@ -94,10 +107,10 @@
         android:layout_marginBottom="21dp"
         android:background="#00EF5350"
         android:backgroundTint="#00FFFFFF"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="48sp"
         app:icon="?attr/actionModeCloseDrawable"
-        app:iconTint="#000000"
+        app:iconTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/txvRegistrarClientes"
         app:layout_constraintEnd_toStartOf="@+id/txvRegistrarClientes"
         app:layout_constraintStart_toStartOf="parent"
@@ -109,9 +122,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="39dp"
+        android:backgroundTint="#FFFFFF"
         android:ems="10"
         android:hint="Ingrese el Correo"
         android:inputType="textEmailAddress"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNombreCliente" />
 

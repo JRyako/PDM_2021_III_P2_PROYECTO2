@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo1pr2"
+    android:background="@drawable/fondogris"
     tools:context=".MainActivity">
 
     <Button
@@ -12,61 +12,60 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="34dp"
-        android:layout_marginBottom="37dp"
+        android:layout_marginBottom="35dp"
         android:backgroundTint="#474646"
         android:backgroundTintMode="add"
         android:text="Empleados"
-        app:layout_constraintBottom_toTopOf="@+id/btn_Clientes"
+        app:layout_constraintBottom_toTopOf="@+id/btn_pedidos"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_menus"
+        app:layout_constraintStart_toEndOf="@+id/btn_Clientes"
         app:layout_constraintTop_toBottomOf="@+id/Grupo1" />
 
     <Button
         android:id="@+id/btn_Clientes"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginBottom="39dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginEnd="27dp"
         android:backgroundTint="#474646"
         android:text="Clientes"
         app:icon="@android:drawable/ic_menu_myplaces"
-        app:layout_constraintBottom_toTopOf="@+id/btn_facturas"
-        app:layout_constraintEnd_toStartOf="@+id/btn_pedidos"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_empleados" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_empleados"
+        app:layout_constraintEnd_toStartOf="@+id/btn_empleados"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_menus"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginEnd="35dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="27dp"
         android:backgroundTint="#474646"
         android:text="Menus"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_empleados"
-        app:layout_constraintEnd_toStartOf="@+id/btn_empleados"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btn_empleados" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_pedidos"
+        app:layout_constraintEnd_toStartOf="@+id/btn_pedidos"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_pedidos"
         android:layout_width="0dp"
-        android:layout_height="56dp"
+        android:layout_height="0dp"
         android:layout_marginEnd="36dp"
+        android:layout_marginBottom="37dp"
         android:backgroundTint="#474646"
         android:backgroundTintMode="add"
         android:text="Pedidos"
         app:icon="?attr/actionModePasteDrawable"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btn_Clientes"
+        app:layout_constraintBottom_toTopOf="@+id/btn_facturas"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_Clientes" />
+        app:layout_constraintStart_toEndOf="@+id/btn_menus"
+        app:layout_constraintTop_toBottomOf="@+id/btn_empleados" />
 
     <Button
         android:id="@+id/btn_facturas"
         android:layout_width="164dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="108dp"
+        android:layout_marginBottom="46dp"
         android:backgroundTint="#474646"
         android:backgroundTintMode="add"
         android:text="Facturas"
@@ -74,7 +73,7 @@
         app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_Clientes" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_pedidos" />
 
     <TextView
         android:id="@+id/Grupo1"
@@ -94,13 +93,15 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="205dp"
-        android:layout_height="196dp"
-        android:layout_marginBottom="28dp"
+        android:layout_width="287dp"
+        android:layout_height="256dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="26dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_facturas"
-        app:srcCompat="@drawable/ujcv" />
+        app:srcCompat="@drawable/logoUJCV" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
