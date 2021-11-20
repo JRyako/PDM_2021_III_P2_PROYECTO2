@@ -19,7 +19,7 @@ class activityListarEmpleados : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_listar_empleados)
         btnRegistrarEmpleado.setOnClickListener { registrarempleado() }
-        estado_cliente()
+        estado_empleado()
         println(estadogeneral)
         if(estadogeneral.equals("true")){
             iniciarList()
@@ -38,11 +38,11 @@ class activityListarEmpleados : AppCompatActivity() {
     private fun iniciarList(){
         val intent = intent
         Valoresempleados= intent.getSerializableExtra("empleado") as HashMap<Int,String>
-        println("Recibi de Registrar cliente: "+ Valoresempleados)
+        println("Recibi de Registrar empleado: "+ Valoresempleados)
     }
 
     /*OBTENER EL ESTADO DE LA LISTA*/
-    private fun estado_cliente(){
+    private fun estado_empleado(){
         val bundle = intent.extras
         val get = bundle?.get("estado-g")
         this.estadogeneral = getString(R.string.estados, get)

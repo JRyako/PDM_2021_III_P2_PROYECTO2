@@ -4,6 +4,7 @@ import android.os.Parcel
 import android.os.Parcelable
 
 class Clientes() : Parcelable {
+    var Precio: Int=0
     var Codigo       :Int = 0
     var Nombre       :String = ""
     var Correo       :String = ""
