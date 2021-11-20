@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/axelp/AndroidStudioProjects/PDM_2021_III_P2_PROYECTO2/app/src/main/res/layout/activity_cliente.xml" value="0.26268115942028986" />
+        <entry key="..\:/Users/axelp/AndroidStudioProjects/PDM_2021_III_P2_PROYECTO2/app/src/main/res/layout/activity_empleado.xml" value="0.26268115942028986" />
+        <entry key="..\:/Users/axelp/AndroidStudioProjects/PDM_2021_III_P2_PROYECTO2/app/src/main/res/layout/activity_listar_clientes.xml" value="0.26268115942028986" />
+        <entry key="..\:/Users/axelp/AndroidStudioProjects/PDM_2021_III_P2_PROYECTO2/app/src/main/res/layout/activity_listar_facturas.xml" value="0.26268115942028986" />
+        <entry key="..\:/Users/axelp/AndroidStudioProjects/PDM_2021_III_P2_PROYECTO2/app/src/main/res/layout/activity_listar_pedidos.xml" value="0.26268115942028986" />
+        <entry key="..\:/Users/axelp/AndroidStudioProjects/PDM_2021_III_P2_PROYECTO2/app/src/main/res/layout/activity_main.xml" value="0.26268115942028986" />
+        <entry key="..\:/Users/axelp/AndroidStudioProjects/PDM_2021_III_P2_PROYECTO2/app/src/main/res/layout/activity_menu.xml" value="0.26268115942028986" />
         <entry key="..\:/Users/johnn/Documents/GitHub/PDM_2021_III_P2_PROYECTO2/app/src/main/res/layout/activity_cliente.xml" value="0.23641304347826086" />
         <entry key="..\:/Users/johnn/Documents/GitHub/PDM_2021_III_P2_PROYECTO2/app/src/main/res/layout/activity_clientes.xml" value="0.25" />
         <entry key="..\:/Users/johnn/Documents/GitHub/PDM_2021_III_P2_PROYECTO2/app/src/main/res/layout/activity_empleado.xml" value="0.264" />

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PDM_2021_III_P2_PROYECTO2</string>
+    <string name="estados">%s</string>
 </resources>
