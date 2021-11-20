@@ -18,7 +18,6 @@ class activityCliente : AppCompatActivity() {
         btn_RegresarClientes.setOnClickListener { regresar() }
         fabRegistrarCliente.setOnClickListener { guardar() }
         iniciarList()
-
     }
     private fun regresar(){
         val intentClientes = Intent(this,activityListarClientes::class.java)
@@ -45,18 +44,13 @@ class activityCliente : AppCompatActivity() {
             Valoresclientes.put(dato.Codigo, parametro.toString())
             Toast.makeText(applicationContext, "Cliente Registrado", Toast.LENGTH_SHORT).show()
 
-
-
             val intent = Intent(this, activityListarClientes::class.java)
             intent.putExtra("cliente", Valoresclientes)
             intent.putExtra("estado-g", "true")
             startActivity(intent)
 
-
         }
-
         }
-
 
     private fun iniciarList(){
         try {
@@ -67,7 +61,6 @@ class activityCliente : AppCompatActivity() {
             println(e.message)
 
         }
-
     }
     }
 

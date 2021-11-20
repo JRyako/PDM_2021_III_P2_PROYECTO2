@@ -26,7 +26,6 @@ class activityListarClientes : AppCompatActivity() {
             LISTAR()
         }
 
-
     }
     private fun registrarcliente(){
         val intent = Intent(this, activityCliente::class.java)
@@ -42,7 +41,6 @@ class activityListarClientes : AppCompatActivity() {
         println("Recibi de Registrar cliente: "+ Valoresclientes)
     }
 
-
     /*OBTENER EL ESTADO DE LA LISTA*/
     private fun estado_cliente(){
         val bundle = intent.extras
@@ -50,7 +48,6 @@ class activityListarClientes : AppCompatActivity() {
         this.estadogeneral = getString(R.string.estados, get)
 
     }
-
 
     /*LLENAR EL LISTVIW CON LA LISTA OBTENIDA*/
     fun LISTAR(){
@@ -73,28 +70,15 @@ class activityListarClientes : AppCompatActivity() {
 
         }
 
-
-
-
         val adaptador = ArrayAdapter(this,android.R.layout.simple_list_item_1,A)
 
         list.adapter =adaptador
         list.onItemSelectedListener = object:
             AdapterView.OnItemSelectedListener { override fun onNothingSelected(parent: AdapterView<*>?) {
         }
-
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long)
             {
-
-
-
             }
         }
-
-
-
-
     }
-
-
 }
