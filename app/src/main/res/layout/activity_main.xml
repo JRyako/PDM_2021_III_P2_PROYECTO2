@@ -9,13 +9,14 @@
 
     <Button
         android:id="@+id/btn_empleados"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="160dp"
+        android:layout_height="55dp"
         android:layout_marginEnd="34dp"
         android:layout_marginBottom="35dp"
         android:backgroundTint="#474646"
         android:backgroundTintMode="add"
         android:text="Empleados"
+        app:icon="?android:attr/fingerprintAuthDrawable"
         app:layout_constraintBottom_toTopOf="@+id/btn_pedidos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_Clientes"
@@ -23,8 +24,8 @@
 
     <Button
         android:id="@+id/btn_Clientes"
-        android:layout_width="0dp"
-        android:layout_height="53dp"
+        android:layout_width="160dp"
+        android:layout_height="55dp"
         android:layout_marginStart="43dp"
         android:layout_marginEnd="27dp"
         android:backgroundTint="#474646"
@@ -36,20 +37,21 @@
 
     <Button
         android:id="@+id/btn_menus"
-        android:layout_width="0dp"
-        android:layout_height="53dp"
+        android:layout_width="160dp"
+        android:layout_height="55dp"
         android:layout_marginStart="42dp"
         android:layout_marginEnd="27dp"
         android:backgroundTint="#474646"
         android:text="Menus"
+        app:icon="?android:attr/actionModeFindDrawable"
         app:layout_constraintBaseline_toBaselineOf="@+id/btn_pedidos"
         app:layout_constraintEnd_toStartOf="@+id/btn_pedidos"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_pedidos"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="160dp"
+        android:layout_height="55dp"
         android:layout_marginEnd="36dp"
         android:layout_marginBottom="37dp"
         android:backgroundTint="#474646"
@@ -63,13 +65,13 @@
 
     <Button
         android:id="@+id/btn_facturas"
-        android:layout_width="164dp"
-        android:layout_height="0dp"
+        android:layout_width="160dp"
+        android:layout_height="55dp"
         android:layout_marginBottom="46dp"
         android:backgroundTint="#474646"
         android:backgroundTintMode="add"
         android:text="Facturas"
-        app:icon="?android:attr/actionModeFindDrawable"
+        app:icon="@android:drawable/ic_menu_today"
         app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

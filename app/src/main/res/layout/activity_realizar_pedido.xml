@@ -58,10 +58,11 @@
         android:id="@+id/btnCompletarPedido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="34dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="44dp"
         android:backgroundTint="#474646"
         android:text="Completado"
+        app:icon="@android:drawable/ic_menu_save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
