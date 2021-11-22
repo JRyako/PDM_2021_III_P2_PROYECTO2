@@ -10,81 +10,160 @@ import android.widget.ListView
 import android.widget.Toast
 import hn.edu.ujcv.pdm_2021_iii_p2_proyecto2.Clases.Clientes
 import hn.edu.ujcv.pdm_2021_iii_p2_proyecto2.Clases.Menus
+import kotlinx.android.synthetic.main.activity_listar_clientes.*
 import kotlinx.android.synthetic.main.activity_listar_menus.*
 import java.lang.Exception
 
 class activityListarMenus : AppCompatActivity() {
 
 
+
+    var Valoresclientes: HashMap<Int, String> = hashMapOf()
     var Valoresmenus: HashMap<Int, String> = hashMapOf()
-    var estadogeneral="false"
+    var Valoresempleados: HashMap<Int, String> = hashMapOf()
+    var Valoresfactura: HashMap<Int, String> = hashMapOf()
+    var Valorespedido: HashMap<Int, String> = hashMapOf()
+    var num =""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_listar_menus)
         btnRegistrarMenus.setOnClickListener { registrarmenu() }
-        estado_menu()
-        println(estadogeneral)
-        if(estadogeneral.equals("true")){
-            iniciarList()
-            LISTAR()
-        }
-
+        iniciarList1()
+        iniciarList2()
+        iniciarList3()
+        iniciarList4()
+        iniciarList5()
+        LISTAR()
+        iniciarList6()
+        button4.setOnClickListener { volver() }
     }
     private fun registrarmenu(){
         val intent = Intent(this, activityMenu::class.java)
-        intent.putExtra("Menu", Valoresmenus)
+        intent.putExtra("c", Valoresclientes)
+        intent.putExtra("m", Valoresmenus)
+        intent.putExtra("e", Valoresempleados)
+        intent.putExtra("f", Valoresfactura)
+        intent.putExtra("p", Valorespedido)
+        intent.putExtra("cont", num.toString())
         startActivity(intent)
 
     }
 
-    /*OBTENER LA LISTA*/
-    private fun iniciarList(){
-        val intent = intent
-        Valoresmenus= intent.getSerializableExtra("menus") as HashMap<Int,String>
-        println("Recibi de Registrar cliente: "+ Valoresmenus)
+    fun volver(){
+        val intent = Intent(this, MainActivity::class.java)
+        intent.putExtra("c", Valoresclientes)
+        intent.putExtra("m", Valoresmenus)
+        intent.putExtra("e", Valoresempleados)
+        intent.putExtra("f", Valoresfactura)
+        intent.putExtra("p", Valorespedido)
+        intent.putExtra("cont", num.toString())
+        startActivity(intent)
     }
 
-    /*OBTENER EL ESTADO DE LA LISTA*/
-    private fun estado_menu(){
-        val bundle = intent.extras
-        val get = bundle?.get("estado-g")
-        this.estadogeneral = getString(R.string.estados, get)
 
-    }
 
     /*LLENAR EL LISTVIW CON LA LISTA OBTENIDA*/
     fun LISTAR(){
-        val list = findViewById<ListView>(R.id.lstViewMenus)
+        try {
+            val list = findViewById<ListView>(R.id.lstViewMenus)
 
-        var id:String
-        var nombre:String
-        var Precio:String
-        var Descripcion:String
-        var final=""
+            var id:String
+            var nombre:String
+            var correo:String
+            var final=""
 
-        var A: java.util.ArrayList<String> = java.util.ArrayList()
+            var A: java.util.ArrayList<String> = java.util.ArrayList()
 
-        for(i in Valoresmenus){
-            val data = i.toString().split("|").toTypedArray()
-            id=data[1].toString()
-            nombre=data[2].toString()
-            Precio=data[3].toString()
-            Descripcion=data[4].toString()
-            final= id +" "+ nombre + " "+Precio+" "+Descripcion
-            A.add(final)
+            for(i in Valoresmenus){
+                val data = i.toString().split("|").toTypedArray()
+                id=data[1].toString()
+                nombre=data[2].toString()
+                correo=data[3].toString()
+                final= id +" "+ nombre + " "+correo
+                A.add(final)
 
-        }
-
-        val adaptador = ArrayAdapter(this,android.R.layout.simple_list_item_1,A)
-
-        list.adapter =adaptador
-        list.onItemSelectedListener = object:
-            AdapterView.OnItemSelectedListener { override fun onNothingSelected(parent: AdapterView<*>?) {
-        }
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long)
-            {
             }
+
+            val adaptador = ArrayAdapter(this,R.layout.row,A)
+
+            list.adapter =adaptador
+            list.onItemSelectedListener = object:
+                AdapterView.OnItemSelectedListener { override fun onNothingSelected(parent: AdapterView<*>?) {
+            }
+                override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long)
+                {
+                }
+            }
+        }catch (e: Exception){
+            println(e.message)
+
+        }
+
+    }
+    private fun iniciarList1(){
+        try {
+            val intent = intent
+            Valoresclientes= intent.getSerializableExtra("c") as HashMap<Int,String>
+            println("Recibi de Registrar cliente: "+ Valoresclientes.toString())
+        }catch (e:Exception){
+            println(e.message)
+
+        }
+    }
+
+    private fun iniciarList2(){
+        try {
+            val intent = intent
+            Valoresmenus= intent.getSerializableExtra("m") as HashMap<Int,String>
+            println("Recibi de Registrar cliente: "+ Valoresmenus.toString())
+        }catch (e:Exception){
+            println(e.message)
+
+        }
+    }
+
+    private fun iniciarList3(){
+        try {
+            val intent = intent
+            Valoresempleados= intent.getSerializableExtra("e") as HashMap<Int,String>
+            println("Recibi de Registrar cliente: "+ Valoresempleados.toString())
+        }catch (e:Exception){
+            println(e.message)
+
+        }
+    }
+
+    private fun iniciarList4(){
+        try {
+            val intent = intent
+            Valoresfactura= intent.getSerializableExtra("f") as HashMap<Int,String>
+            println("Recibi de Registrar cliente: "+ Valoresfactura.toString())
+        }catch (e:Exception){
+            println(e.message)
+
+        }
+    }
+
+    private fun iniciarList5(){
+        try {
+            val intent = intent
+            Valorespedido= intent.getSerializableExtra("p") as HashMap<Int,String>
+            println("Recibi de Registrar cliente: "+ Valorespedido.toString())
+        }catch (e:Exception){
+            println(e.message)
+
+        }
+    }
+
+    private fun iniciarList6(){
+        try {
+            val bundle = intent.extras
+            val get = bundle?.get("cont")
+            num = getString(R.string.estados, get)
+        }catch (e: Exception){
+            println(e.message)
+
         }
     }
 }

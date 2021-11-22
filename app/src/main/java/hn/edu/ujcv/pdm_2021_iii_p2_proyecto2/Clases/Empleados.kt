@@ -37,12 +37,6 @@ class Empleados() : Parcelable {
 
     }
 
-    /*fun imprimirNotas(): String{
-        return "Clase: $nombre\nNota Primer Parcial: $n1\nNota Segundo Parcial: $n2\nNota Tercer Parcial: $n3\n"
-    }*/
-
-    // este era el imprimir notas del laboratorio 2 no se como implimentarlo en este proyecto
-
     override fun toString(): String {
         return "Nombre del Empleado: $Nombre\nId: $Codigo\nPuesto del Empleado: $Puesto"
     }

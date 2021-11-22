@@ -11,18 +11,24 @@ import java.lang.Exception
 class activityCliente : AppCompatActivity() {
 
     var Valoresclientes: HashMap<Int, String> = hashMapOf()
+    var Valoresmenus: HashMap<Int, String> = hashMapOf()
+    var Valoresempleados: HashMap<Int, String> = hashMapOf()
+    var Valoresfactura: HashMap<Int, String> = hashMapOf()
+    var Valorespedido: HashMap<Int, String> = hashMapOf()
+    var num =""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cliente)
-        btn_RegresarClientes.setOnClickListener { regresar() }
         fabRegistrarCliente.setOnClickListener { guardar() }
-        iniciarList()
+        iniciarList1()
+        iniciarList2()
+        iniciarList3()
+        iniciarList4()
+        iniciarList5()
+
     }
-    private fun regresar(){
-        val intentClientes = Intent(this,activityListarClientes::class.java)
-        startActivity(intentClientes)
-    }
+
     private fun guardar(){
         if(txtCodigoCliente.text.isEmpty()){
             Toast.makeText(applicationContext, "El Codigo del Cliente no puede estar vacio", Toast.LENGTH_LONG).show()
@@ -45,22 +51,84 @@ class activityCliente : AppCompatActivity() {
             Toast.makeText(applicationContext, "Cliente Registrado", Toast.LENGTH_SHORT).show()
 
             val intent = Intent(this, activityListarClientes::class.java)
-            intent.putExtra("cliente", Valoresclientes)
-            intent.putExtra("estado-g", "true")
+            intent.putExtra("c", Valoresclientes)
+            intent.putExtra("m", Valoresmenus)
+            intent.putExtra("e", Valoresempleados)
+            intent.putExtra("f", Valoresfactura)
+            intent.putExtra("p", Valorespedido)
+            intent.putExtra("cont", num)
             startActivity(intent)
 
         }
-        }
+    }
 
-    private fun iniciarList(){
+
+
+    private fun iniciarList1(){
         try {
             val intent = intent
-            Valoresclientes= intent.getSerializableExtra("Menu") as HashMap<Int,String>
+            Valoresclientes= intent.getSerializableExtra("c") as HashMap<Int,String>
             println("Recibi de Registrar cliente: "+ Valoresclientes.toString())
-        }catch (e:Exception){
+        }catch (e: Exception){
             println(e.message)
 
         }
     }
+
+    private fun iniciarList2(){
+        try {
+            val intent = intent
+            Valoresmenus= intent.getSerializableExtra("m") as HashMap<Int,String>
+            println("Recibi de Registrar cliente: "+ Valoresmenus.toString())
+        }catch (e: Exception){
+            println(e.message)
+
+        }
     }
+
+    private fun iniciarList3(){
+        try {
+            val intent = intent
+            Valoresempleados= intent.getSerializableExtra("e") as HashMap<Int,String>
+            println("Recibi de Registrar cliente: "+ Valoresempleados.toString())
+        }catch (e: Exception){
+            println(e.message)
+
+        }
+    }
+
+    private fun iniciarList4(){
+        try {
+            val intent = intent
+            Valoresfactura= intent.getSerializableExtra("f") as HashMap<Int,String>
+            println("Recibi de Registrar cliente: "+ Valoresfactura.toString())
+        }catch (e: Exception){
+            println(e.message)
+
+        }
+    }
+
+    private fun iniciarList5(){
+        try {
+            val intent = intent
+            Valorespedido= intent.getSerializableExtra("p") as HashMap<Int,String>
+            println("Recibi de Registrar cliente: "+ Valorespedido.toString())
+        }catch (e: Exception){
+            println(e.message)
+
+        }
+    }
+    private fun iniciarList6(){
+        try {
+            val bundle = intent.extras
+            val get = bundle?.get("cont")
+            num = getString(R.string.estados, get)
+        }catch (e: Exception){
+            println(e.message)
+
+        }
+    }
+
+
+}
 

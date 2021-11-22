@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondogris"
+    tools:context=".activityFactura">
+
+    <Spinner
+        android:id="@+id/spnSeleccionarEmpleadoCajero"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="71dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnEnviarFactura"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvSeleccionarEmpleadoCajero"
+        app:layout_constraintTop_toBottomOf="@+id/spnSeleccionarPago" />
+
+    <TextView
+        android:id="@+id/txvSeleccionarPedido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="113dp"
+        android:text="Seleccione el Pedido"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/txvSeleccionarPago"
+        app:layout_constraintEnd_toStartOf="@+id/spnSeleccionarPedido"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button7" />
+
+    <Spinner
+        android:id="@+id/spnSeleccionarPago"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="84dp"
+        app:layout_constraintBottom_toTopOf="@+id/spnSeleccionarEmpleadoCajero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvSeleccionarPago"
+        app:layout_constraintTop_toBottomOf="@+id/spnSeleccionarPedido" />
+
+    <Spinner
+        android:id="@+id/spnSeleccionarPedido"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="77dp"
+        app:layout_constraintBottom_toTopOf="@+id/spnSeleccionarPago"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvSeleccionarPedido"
+        app:layout_constraintTop_toBottomOf="@+id/txvRealizarFactura" />
+
+    <TextView
+        android:id="@+id/txvSeleccionarPago"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="120dp"
+        android:text="Seleccione el tipo de Pago"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/txvSeleccionarEmpleadoCajero"
+        app:layout_constraintEnd_toStartOf="@+id/spnSeleccionarPago"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvSeleccionarPedido" />
+
+    <TextView
+        android:id="@+id/txvSeleccionarEmpleadoCajero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="264dp"
+        android:text="Seleccione el Empleado"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/spnSeleccionarEmpleadoCajero"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvSeleccionarPago" />
+
+    <TextView
+        android:id="@+id/txvRealizarFactura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="74dp"
+        android:layout_marginBottom="62dp"
+        android:text="Realizar Factura"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/spnSeleccionarPedido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnEnviarFactura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="109dp"
+        android:backgroundTint="#474646"
+        android:text="Enviar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spnSeleccionarEmpleadoCajero" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="115dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="108dp"
+        android:backgroundTint="#474646"
+        android:text="Regresar"
+        app:layout_constraintBottom_toTopOf="@+id/txvSeleccionarPedido"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondogris"
+    tools:context=".activityPedido">
+
+    <TextView
+        android:id="@+id/txvRealizarPedido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="74dp"
+        android:text="Realizar Pedido"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spnSeleccionarCliente"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/spnSeleccionarVariosMenus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvSeleccionarCliente"
+        app:layout_constraintTop_toBottomOf="@+id/txvRealizarPedido" />
+
+    <Spinner
+        android:id="@+id/spnSeleccionarVariosMenus"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="78dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnIngresarMenuAList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvSeleccionarVariosMenus"
+        app:layout_constraintTop_toBottomOf="@+id/txvSeleccionarCliente" />
+
+    <Spinner
+        android:id="@+id/spnSeleccionarEmpleadoMesero"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewTO"
+        app:layout_constraintEnd_toEndOf="@+id/spnSeleccionarCliente"
+        app:layout_constraintStart_toStartOf="@+id/spnSeleccionarCliente"
+        app:layout_constraintTop_toBottomOf="@+id/lstViewMenusdelPedido" />
+
+    <Button
+        android:id="@+id/btnCompletarPedido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#474646"
+        android:text="Completado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txvSeleccionarEmpleadoMesero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginBottom="112dp"
+        android:text="Seleccione el Mesero"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txvSeleccionarCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="49dp"
+        android:text="Seleccione el Cliente"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/spnSeleccionarCliente"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvRealizarPedido" />
+
+    <TextView
+        android:id="@+id/txvSeleccionarVariosMenus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginEnd="40dp"
+        android:text="Seleccione los Menus"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/spnSeleccionarVariosMenus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spnSeleccionarVariosMenus" />
+
+    <TextView
+        android:id="@+id/txvCantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="Cantidad"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtCantidad"
+        app:layout_constraintEnd_toStartOf="@+id/txtCantidad" />
+
+    <ListView
+        android:id="@+id/lstViewMenusdelPedido"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txvSeleccionarEmpleadoMesero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txvCantidad" />
+
+    <Button
+        android:id="@+id/btnIngresarMenuAList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="#474646"
+        android:text="Aceptar"
+        app:layout_constraintBottom_toTopOf="@+id/lstViewMenusdelPedido"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/txtCantidad"
+        android:layout_width="120dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="329dp"
+        android:layout_marginEnd="137dp"
+        android:layout_marginBottom="330dp"
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTO"
+        app:layout_constraintEnd_toEndOf="@+id/spnSeleccionarVariosMenus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginBottom="29dp"
+        android:text="Total"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnCompletarPedido" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginBottom="32dp"
+        android:text=""
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewTO" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

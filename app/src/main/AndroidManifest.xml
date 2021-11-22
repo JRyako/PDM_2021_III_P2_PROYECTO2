@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PDM_2021_III_P2_PROYECTO2">
         <activity
+            android:name=".activityFactura"
+            android:exported="false" />
+        <activity
+            android:name=".activityPedido"
+            android:exported="false" />
+        <activity
             android:name=".activityEmpleado"
             android:exported="false" />
         <activity
@@ -32,9 +38,6 @@
             android:exported="false" />
         <activity
             android:name=".activityListarClientes"
-            android:exported="false" />
-        <activity
-            android:name=".ClientesActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

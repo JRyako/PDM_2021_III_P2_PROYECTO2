@@ -11,12 +11,12 @@
         android:id="@+id/txvRegistrarClientes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
         android:layout_marginTop="80dp"
         android:text="Registrar Empleado"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/btn_RegresarEmpleados"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
@@ -25,12 +25,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="39dp"
+        android:backgroundTint="#FFFFFF"
         android:ems="10"
         android:hint="Ingrese el Nombre"
-        android:backgroundTint="#FFFFFF"
+        android:inputType="textPersonName"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
-        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCodigoEmpleado" />
 
@@ -53,12 +53,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="51dp"
         android:layout_marginEnd="39dp"
+        android:backgroundTint="#FFFFFF"
         android:ems="10"
         android:hint="Ingrese el Codigo"
-        android:backgroundTint="#FFFFFF"
+        android:inputType="number"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
-        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txvRegistrarClientes" />
 
@@ -90,28 +90,11 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:clickable="true"
         android:backgroundTint="#FFFFFF"
+        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/ic_menu_save" />
-
-    <Button
-        android:id="@+id/btn_RegresarEmpleados"
-        android:layout_width="45dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="24dp"
-        android:background="#00EF5350"
-        android:backgroundTint="#00FFFFFF"
-        android:textColor="#FFFFFF"
-        android:textSize="48sp"
-        app:icon="?attr/actionModeCloseDrawable"
-        app:iconTint="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/txvRegistrarClientes"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/txtPuestoEmpleado"
@@ -119,12 +102,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
         android:layout_marginEnd="37dp"
+        android:backgroundTint="#FFFFFF"
         android:ems="10"
         android:hint="Ingrese el Puesto"
-        android:backgroundTint="#FFFFFF"
+        android:inputType="textPersonName"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
-        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNombreEmpleado" />
 
